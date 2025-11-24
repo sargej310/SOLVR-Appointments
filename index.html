@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SOLVR Delivery Appointment Request</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+  <h2>SOLVR Warehouse Delivery Appointment Request</h2>
+
+  <form id="apptForm">
+
+    <label>Carrier Email (for confirmation)</label>
+    <input type="email" name="carrierEmail" required placeholder="carrier@example.com" />
+
+    <label>Carrier SCAC</label>
+    <input type="text" name="scac" required maxlength="4" placeholder="ABCD" />
+
+    <label>Origin Location</label>
+    <input type="text" name="origin" required />
+
+    <label>Purchase Order Number</label>
+    <input type="text" name="po" required />
+
+    <label>Requested Delivery Date</label>
+    <input type="date" name="date" required />
+
+    <label>Requested Delivery Time</label>
+    <input type="time" name="time" required />
+
+    <label>Item Description</label>
+    <input type="text" name="description" required />
+
+    <label>Quantity</label>
+    <input type="number" name="qty" required min="1" />
+
+    <button type="submit">Submit Appointment Request</button>
+  </form>
+
+  <p id="status"></p>
+</div>
+
+<script src="send_email.js"></script>
+
+</body>
+</html>
